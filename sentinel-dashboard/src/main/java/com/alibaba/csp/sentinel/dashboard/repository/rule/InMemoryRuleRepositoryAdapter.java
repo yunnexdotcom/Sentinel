@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.RuleEntity;
 import com.alibaba.csp.sentinel.dashboard.discovery.MachineInfo;
+import com.alibaba.csp.sentinel.dashboard.util.SnowflakeIdWorker;
 import com.alibaba.csp.sentinel.util.AssertUtil;
 
 /**
@@ -125,5 +126,7 @@ public abstract class InMemoryRuleRepositoryAdapter<T extends RuleEntity> implem
      *
      * @return next unused id
      */
-    abstract protected long nextId();
+    protected long nextId(){
+        return SnowflakeIdWorker.nextUniqId();
+    }
 }

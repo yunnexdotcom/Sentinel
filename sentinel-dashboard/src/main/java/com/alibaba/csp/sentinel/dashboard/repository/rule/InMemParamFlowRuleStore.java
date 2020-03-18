@@ -29,12 +29,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class InMemParamFlowRuleStore extends InMemoryRuleRepositoryAdapter<ParamFlowRuleEntity> {
 
-    private static AtomicLong ids = new AtomicLong(0);
-
-    @Override
-    protected long nextId() {
-        return ids.incrementAndGet();
-    }
+//    private static AtomicLong ids = new AtomicLong(0);
+//
+//    @Override
+//    protected long nextId() {
+//        return ids.incrementAndGet();
+//    }
 
     @Override
     protected ParamFlowRuleEntity preProcess(ParamFlowRuleEntity entity) {
